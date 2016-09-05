@@ -23,7 +23,7 @@
 	<br><br>
 
 
-		<canvas id="myCanvas" width="600" height="400" style="border:1px solid #d3d3d3; float: left;"></canvas>
+		<canvas id="myCanvas" width="500" height="400" style="border:1px solid #d3d3d3; float: left;"></canvas>
   <script>
 
 function pulleymasschange(val) {
@@ -103,7 +103,7 @@ m = Number(document.getElementById("m").value);
 k = Number(document.getElementById("k").value);
 r = Number(document.getElementById("r").value);
 R = Number(document.getElementById("R").value);
-x_0 = 0.7 * canvaswidth; //center of pulley
+x_0 = 0.8 * canvaswidth; //center of pulley
 y_0 = 0.5 * canvasheight - 3;
 
 //thickness of masses
@@ -147,7 +147,7 @@ ctx.clearRect(0,0,canvaswidth*scale,canvasheight*scale);
 
 	timer = timer + dt;
 	ctx.fillStyle="black"
-	ctx.fillText("Timer: " + Math.round(timer*10)/10 + " s", canvaswidth*scale - 90, 20);
+	ctx.fillText("Timer: " + Math.round(timer*10)/10 + " s", 10, 20);
 	ctx.font = "15px Arial"
 
 	ctx.fillStyle="black";
