@@ -52,7 +52,7 @@ var names = { //choose how to write variable string.
     R: "R",
     r: "r",
     I_o: "I<sub>o</sub>"
-    alpha: "&#945",
+    alpha: "&#945;",
     a_1: "a<sub>1</sub>",
     a_2: "a<sub>2</sub>",
     X: "X",
