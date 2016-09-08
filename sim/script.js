@@ -224,7 +224,7 @@ function getValuesFromSS() {
 //ones the inputs are pulled from Smart Sparrow then they're calculated (all part of the draw function). Make sure I start from elementary formulas and work done.
 function calculateVariables() {
     values.I_o = values.m_pulley * values.k * values.k;
-    values.alpha = (values.M_1*9.81*values.R - values.m*9.81*values.r)/(values.I_o + values.M*values.R*values.R + values.m*values.r*values.r);
+    values.alpha = (values.M_1*9.81*values.R - values.m_2*9.81*values.r)/(values.I_o + values.M_1*values.R*values.R + values.m_2*values.r*values.r);
     values.a_1 = values.R * values.alpha;
     values.a_2 = values.r * values.alpha;
     values.T = Math.sqrt(2*values.X/values.a_1);
