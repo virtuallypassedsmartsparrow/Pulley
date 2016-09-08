@@ -51,17 +51,17 @@ var names = { //choose how to write variable string.
     m_2: "m",
     R: "R",
     r: "r",
-    I_o: "I<sub>o</sub>"
+    I_o: "I<sub>o</sub>",
     alpha: "&#945;",
     a_1: "a<sub>1</sub>",
     a_2: "a<sub>2</sub>",
     X: "X",
     T: "T",
     V_1: "V",
-    KE_1: "KE<sub>1</sub>"
-    KE_2: "KE<sub>2</sub>"
-    KE_pulley: "KE<sub>pulley</sub>"
-    KE_total: "KE<sub>total</sub>"
+    KE_1: "KE<sub>1</sub>",
+    KE_2: "KE<sub>2</sub>",
+    KE_pulley: "KE<sub>pulley</sub>",
+    KE_total: "KE<sub>total</sub>",
 };
 
 var units = { //write the units
@@ -136,7 +136,7 @@ pipit.Controller.notifyOnReady();
 
 model.on("change:m_pulley", function() {
     draw();
-
+});
 model.on("change:k", function() {
     draw();
 });
@@ -210,8 +210,6 @@ function displayValues() {
     $("#right")[0].innerHTML = s;
 }
 
-
-
 // Here i'm getting all the inputs from Smart Sparrow. This is the start of the draw function. Only put in inputs because other variables won't be there
 function getValuesFromSS() {
     values.m_pulley = model.get('m_pulley');
@@ -252,6 +250,7 @@ function getShowVariables() {
             switch (page) {
                 case "10":
                     return ["m_pulley", "M_1", "m_2", "k", "R", "r"] 
+                    break;
                 case "20": 
                 case "30": 
                 case "40": 
@@ -279,6 +278,7 @@ function getShowVariables() {
                 case "70":
                 case "80":
                     return ["I_o", "alpha"];
+                    break;
             }
             break;
 
@@ -314,35 +314,38 @@ function getShowVariables() {
                     break;
                 case "80":
                     return ["T", "V_1"];
+                    break;
             }
                 break;
 
-        // case "5":
-        //     switch (page) {
-        //         case "10":
-        //         case "20":
-        //         case "30":
-        //         case "40":
-        //         case "50":
-        //         case "60":
-        //         case "70":
-        //             return [];
-        //             break;
-        //         case "80":
-        //             return ["d_3"];
-        //             break;
-        //         case "90":
-        //             return ["d_3", "V_3"];
-        //             break;
-        //         case "100":
-        //         case "110":
-        //             return ["d_3", "V_3", "M_3"];
-        //             break;
-        //     }
-        //     break;
+                                    // case "5":
+                                    //     switch (page) {
+                                    //         case "10":
+                                    //         case "20":
+                                    //         case "30":
+                                    //         case "40":
+                                    //         case "50":
+                                    //         case "60":
+                                    //         case "70":
+                                    //             return [];
+                                    //             break;
+                                    //         case "80":
+                                    //             return ["d_3"];
+                                    //             break;
+                                    //         case "90":
+                                    //             return ["d_3", "V_3"];
+                                    //             break;
+                                    //         case "100":
+                                    //         case "110":
+                                    //             return ["d_3", "V_3", "M_3"];
+                                    //             break;
+                                    //     }
+                                    //     break;
     }
     return []; // empty
 }
+
+
 /*
 function getShowVariables() {
     switch (category) {
